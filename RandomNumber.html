@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button random number between 0 and 300</p>
+
+<button onclick="randomNumber(300)">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function randomNumber(high) {
+	var d = new Date();
+    var t= d.getTime();
+
+    var z = (t%high);
+    
+    document.getElementById("demo").innerHTML = z;
+}
+</script>
+
+</body>
+</html>
