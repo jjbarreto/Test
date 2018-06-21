@@ -1,0 +1,57 @@
+
+.wrapper {
+  position: relative;
+  height: 12em;
+}
+.countdown section {
+  position: relative;
+}
+#days:after, #hours:after, #minutes:after, #seconds:after {
+  content: "DAYS";
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: -70px;
+  font-size: 12px;
+}
+#hours:after {
+  content: "HOURS";
+}
+#minutes:after {
+  content: "MINUTES";
+}
+#seconds:after {
+  content: "SECONDS";
+}
+.separator {
+  margin: 0;
+  width: 2rem;
+}
+.number, .separator {
+  display: block;
+  color: gray;
+  height: 10rem;
+  font-size: 10rem;
+  position: relative;
+  line-height: 10rem;
+  text-align: center;
+  width: 100%;
+  border-style: solid;
+  border-width:3px;  
+  border-radius: 20px;
+  border-color: gray;
+  margin-left:10px ;
+}
+.countdown {
+  display: flex;
+  transform-style: preserve3d;
+  perspective: 500px;
+  height: 10rem;
+  width: 64em;
+  margin: 0 auto;
+}
+.countdown.remove {
+  animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+  overflow: hidden;
+}
